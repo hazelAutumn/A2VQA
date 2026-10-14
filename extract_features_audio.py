@@ -6,16 +6,17 @@ import torch
 import torchaudio
 import torchvision.transforms as transforms
 import numpy as np
-import cv2
 from pathlib import Path
 import librosa
 import matplotlib.pyplot as plt
-from scipy import signal
-import skvideo.io
 import os
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset
 import torch.nn as nn
 import torchvision.models as models
+from argparse import ArgumentParser
+import random
+import scipy.io
+
 
 import sys
 # allow importing utility helpers from parent `models/benchmark` folder
@@ -123,9 +124,6 @@ def get_features(audios_data, audio_tStamp, frameRate,
         output = output.squeeze()
     return output
 
-from argparse import ArgumentParser
-import random
-import scipy.io
 
 if __name__ == "__main__":
     parser = ArgumentParser(description='"Extracting Content-Aware Perceptual Features using Pre-Trained ResNet-50')

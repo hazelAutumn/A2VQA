@@ -1,5 +1,5 @@
 # Fixed number of frames sampled
-# The file used to extract feature maps for each video for ResNet30maps
+# The file used to extract feature maps for each video
 # UPDATED DATE: 13.03.2026
 import torch
 from torchvision import transforms, models
